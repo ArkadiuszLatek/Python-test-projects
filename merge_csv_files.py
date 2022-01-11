@@ -25,7 +25,7 @@ def get_offers_csv(feed_name: str, shared_field, fields, prefix="empty_prefix"):
 
 ars_offers = get_offers_csv("ARS.csv", shared_field, ["id", "price", "category", "offer_URL"])
 mxn_offers = get_offers_csv("MXN.csv", shared_field, ["id", "price", "category", "offer_URL"])
-base_offers = get_offers_csv("base.csv", shared_field, ["id", "title", "price", "category", "offer_URL", "image_URL", "description", "freecancel" ], "")
+base_offers = get_offers_csv("base.csv", shared_field, ["id", "title", "price", "category", "offer_URL", "image_URL"], "")
 
 with open("feed.csv", "w") as file:
     csv_writer = csv.DictWriter(file, fieldnames=all_fields)
